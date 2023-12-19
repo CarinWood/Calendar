@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Daylist } from '../../data/Daylist'
 import { Day } from '../day/Day'
 import './days.css'
 
 export const Days = () => {
-    const [dayList, setDayList] = useState([Daylist])
+    const [dayList, setDayList] = useState(Daylist)
+
+
   return (
     <section className='days'>
         {Daylist.map((item) => {
@@ -15,8 +17,6 @@ export const Days = () => {
                         color={item.color} 
                         bg={item.bg} 
                         active={item.active} 
-                        dayList={dayList}
-                        setDayList={setDayList}
                     />
         })}
 

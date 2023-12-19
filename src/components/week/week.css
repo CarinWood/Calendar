@@ -13,4 +13,5 @@
     align-items: center;
     justify-content: center;
     background-color: var(--gray);
+    border: 1px solid #dbdbdb;
 }
