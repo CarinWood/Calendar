@@ -1,0 +1,39 @@
+.box {
+    width: 85px;
+    height: 85px;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.num {
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.gray {
+    background-color: var(--lightgray);
+}
+
+.color-gray {
+    color: gray;
+}
+
+.dot {
+    width: 40px;
+    height: 40px;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-num {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 20px;
+}
