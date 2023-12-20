@@ -1,11 +1,11 @@
 import './day.css'
 
 // eslint-disable-next-line react/prop-types
-export const Day = ({id, num, bg, color, active}) => {
+export const Day = ({id, num, bg, color, active, setDayActive}) => {
 
   return (
     <article 
-       
+        onClick={()=>setDayActive(id)}
         className={bg === 'gray' ? 'box gray': 'box'}
     >
         {active === true ? 

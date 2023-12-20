@@ -6,6 +6,25 @@ import './days.css'
 export const Days = () => {
     const [dayList, setDayList] = useState(Daylist)
 
+    const setDayActive = (id) => {
+        const updatedDayList = dayList.map((day) => ({
+            ...day,
+            active: day.id === id,
+          }));
+          setDayList(updatedDayList);
+        
+    }
+
+    const getActiveValue = (id) => {
+        const filteredList = dayList.filter((day) => day.id === id)
+        return filteredList[0].active
+    }
+
+    useEffect(() => {
+    }, [setDayActive])
+
+    
+
 
   return (
     <section className='days'>
@@ -16,7 +35,8 @@ export const Days = () => {
                         num={item.num} 
                         color={item.color} 
                         bg={item.bg} 
-                        active={item.active} 
+                        active={getActiveValue(item.id)} 
+                        setDayActive={setDayActive}
                     />
         })}
 
